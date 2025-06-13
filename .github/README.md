@@ -1,3 +1,6 @@
+[![type check](https://github.com/balzers/LAgnoLR/actions/workflows/build.yml/badge.svg)](https://github.com/balzers/LAgnoLR/actions/workflows/build.yml)
+[![arXiv](https://img.shields.io/badge/arXiv-2506.10026-b31b1b.svg)](https://arxiv.org/abs/2506.10026)
+
 The project has been tested with Coq 8.20.1.
 
 # Instructions for Typechecking
