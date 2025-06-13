@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          path: repo
       - name: Set-up OCaml
         uses: ocaml/setup-ocaml@v3
         with:
@@ -34,5 +36,6 @@ jobs:
       - name: Build
         run: |
           eval $(opam env)
+          cd repo
           bash gen_makefile.sh
           make -f CoqMakefile

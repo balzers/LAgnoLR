@@ -4,7 +4,7 @@ The project has been tested with Coq 8.20.1.
 
 1. Install `opam` (skip if you already have it): follow the instructions at <https://opam.ocaml.org/doc/Install.html>.
 
-2. Install dev version of `std++` (skip if you already have it) and Coq:
+2. Install the appropriate version of `std++` (skip if you already have it) and Coq:
 
 ```bash
 opam repo add coq-released https://coq.inria.fr/opam/released
