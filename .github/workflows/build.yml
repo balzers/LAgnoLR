@@ -26,5 +26,6 @@ jobs:
 
       - run: opam repo add iris-dev https://gitlab.mpi-sws.org/iris/opam.git
       - run: opam install coq-stdpp
+      - run: eval $(opam env)
       - run: bash gen_makefile.sh
       - run: make -f CoqMakefile
