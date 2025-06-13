@@ -24,8 +24,13 @@ jobs:
         with:
           ocaml-compiler: 5
 
-      - run: opam repo add iris-dev https://gitlab.mpi-sws.org/iris/opam.git
-      - run: opam install coq-stdpp
-      - run: eval $(opam env)
-      - run: bash gen_makefile.sh
-      - run: make -f CoqMakefile
+      - name: Add dependencies
+        run: |
+          opam repo add iris-dev https://gitlab.mpi-sws.org/iris/opam.git
+          opam install coq-stdpp
+
+      - name: Build
+        run: |
+          eval $(opam env)
+          bash gen_makefile.sh
+          make -f CoqMakefile
