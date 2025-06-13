@@ -14,7 +14,7 @@ opam install coq-stdpp
 3. Typecheck the code:
 
 ```bash
-./gen_makefile.sh
+bash gen_makefile.sh
 make -f CoqMakefile
 ```
 
