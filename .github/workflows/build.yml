@@ -1,0 +1,30 @@
+name: type check
+
+on:
+  - push
+  - pull_request
+
+permissions: read-all
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set-up OCaml
+        uses: ocaml/setup-ocaml@v3
+        with:
+          ocaml-compiler: 5
+
+      - run: opam repo add iris-dev https://gitlab.mpi-sws.org/iris/opam.git
+      - run: opam install coq-stdpp
+      - run: bash gen_makefile.sh
+      - run: make -f CoqMakefile
