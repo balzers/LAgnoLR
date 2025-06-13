@@ -1,0 +1,8 @@
+-Q . ST
+
+-arg -w -arg -notation-overridden
+
+stdsharp.v
+syntax.v
+syntax_instances.v
+theory.v
