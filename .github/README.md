@@ -7,8 +7,8 @@ The project has been tested with Coq 8.20.1.
 2. Install dev version of `std++` (skip if you already have it) and Coq:
 
 ```bash
-opam repo add iris-dev https://gitlab.mpi-sws.org/iris/opam.git
-opam install coq-stdpp
+opam repo add coq-released https://coq.inria.fr/opam/released
+opam install coq-stdpp.1.12.0
 ```
 
 3. Typecheck the code:

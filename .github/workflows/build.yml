@@ -26,8 +26,10 @@ jobs:
 
       - name: Add dependencies
         run: |
-          opam repo add iris-dev https://gitlab.mpi-sws.org/iris/opam.git
-          opam install coq-stdpp
+          opam init
+          opam repo add coq-released https://coq.inria.fr/opam/released
+          opam install coq.8.20.1
+          opam install coq-stdpp.1.12.0
 
       - name: Build
         run: |
